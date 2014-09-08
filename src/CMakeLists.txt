@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.6)
+project(vehicle_detect CXX)
+add_executable(vehicle_detect vehicle_detect.cpp)
+find_package(OpenCV REQUIRED)
+target_link_libraries(vehicle_detect ${OpenCV_LIBS})
