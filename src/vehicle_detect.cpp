@@ -10,7 +10,7 @@ using namespace std;
 using namespace cv;
 
 /** Global variables */
-String cascadeName = "../sample_data/classifier/cascade.xml";
+String cascadeName = "../build/classifier/cascade.xml";
 CascadeClassifier cascade;
 String windowName = "Capture - Vehicle detection";
 
