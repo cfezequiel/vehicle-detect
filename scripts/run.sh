@@ -17,8 +17,8 @@ echo 'Running classifier training...'
 #========================================================
 #### METHOD 2: Use positive samples directly ####
 echo 'Generating *.vec file...'
-#find ../datasets/CarData/TrainImages/ -iname "pos*.pgm" -exec echo \{\} 1 0 0 100 40 \; > ../build/positives.info
-#find ../datasets/CarData/TrainImages/ -name "neg*.pgm" > ../build/negatives.txt
-#opencv_createsamples -info ../build/positives.info -num 550 -w 48 -h 24 -vec ../build/samples.vec 
-#rm -rf ../build/classifier/*
+find ../datasets/CarData/TrainImages/ -iname "pos*.pgm" -exec echo \{\} 1 0 0 100 40 \; > ../build/positives.info
+find ../datasets/CarData/TrainImages/ -name "neg*.pgm" > ../build/negatives.txt
+opencv_createsamples -info ../build/positives.info -num 550 -w 48 -h 24 -vec ../build/samples.vec 
+rm -rf ../build/classifier/*
 opencv_traincascade -data ../build/classifier -vec ../build/samples.vec -bg ../build/negatives.txt -numStages 16 -nsplits 2 -minhitrate 0.999 -maxfalsealarm 0.5 -numPos 500 -numNeg 500 -w 48 -h 24 -featureType HAAR
