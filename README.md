@@ -1,45 +1,17 @@
-# README #
+# Detection of vehicles on toll camera images
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Code for demonstrating automatic detection of vehicles in images.
+For Tarlac-Pangasinan-La Union Expressway (TPLEX) toll booth collection auditing.
 
-### What is this repository for? ###
+## Directory structure
 
-Version 0.1
+- `/bin`            Compiled binaries of classifiers
+- `/scripts`        Scripts for generating samples and training classifier
+- `/datasets`       Training data
+- `/src`            C++ source code
 
-Code for testing automatic detectio of vehicles in images.
-To be used for TPLEX toll booth collection audit.
-
-#### Directory structure ####
-
-/bin            Compiled binaries
-/scripts        Scripts for generating samples and training
-/sample_data    Sample dataset
-  /classifier   Classifer XML files (primarily cascade.xml)
-/src            C++ source code
-
-### How do I get set up? ###
-
-#### Summary ####
+## Usage
 
 Go to /scripts and run following command:
 $ ./run.sh
 
-#### TBD ####
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-#### TBD ####
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* cfezequiel
-* Other community or team contact (TBD)
